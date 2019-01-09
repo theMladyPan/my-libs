@@ -12,13 +12,13 @@ using namespace cv;
 using namespace std;
 
 typedef pair<int, int> pixelPair;
-typedef vector<pair<int, int>> pointsVector;
-typedef vector<Point> pixelVector;
+typedef vector<pixelPair> pixelVector;
+typedef vector<Point> pointsVector;
 
 void average(pixelVector &src, float &avgX, float &avgY);
 void average(pointsVector &src, float &avgX, float &avgY);
 void average(Mat &src, float &avgX, float &avgY);
-pointsVector extractPoints(Mat &src);
+pixelVector extractPoints(Mat &src);
 
 #endif // MATRIX_OPERATIONS_H
 

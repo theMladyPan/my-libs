@@ -9,7 +9,7 @@ LeastSquares::LeastSquares(Mat &input)
     double sumXSqrd(0);
 
     average(input, avgX, avgY);
-    pointsVector data = extractPoints(input);
+    pixelVector data = extractPoints(input);
 
     for(auto pair=data.begin();pair!=data.end();pair++){
         // Xm = xi - mean(X)
@@ -30,7 +30,7 @@ LeastSquares::LeastSquares(Mat &input)
 
 }
 
-LeastSquares::LeastSquares(Contour &contour)
+LeastSquares::LeastSquares(Contour contour)
 {
     float avgX(0);
     float avgY(0);

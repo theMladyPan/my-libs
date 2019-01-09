@@ -5,7 +5,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/features2d.hpp>
-#include <include/matrix_operations.h>
+#include "matrix_operations.h"
 
 using namespace cv;
 typedef vector<Point> Contour;
@@ -18,7 +18,7 @@ private:
     double intercept;
 public:
     LeastSquares(Mat &input);
-    LeastSquares(Contour &contour);
+    LeastSquares(Contour contour);
     double getSlope(){
         return slope;
     }
