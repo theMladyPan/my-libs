@@ -26,12 +26,14 @@ INCLUDEPATH += /usr/local/include/opencv4
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
 
 SOURCES += \
-        src/leastsquares.cpp \
-    src/matrix_operations.cpp
+        leastsquares.cpp \
+        matrix_operations.cpp \
+    miscelaneous.cpp
 
 HEADERS += \
-        include/leastsquares.h \
-        include/matrix_operations.h
+        leastsquares.h \
+        matrix_operations.h \
+    miscelaneous.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

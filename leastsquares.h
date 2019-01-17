@@ -5,7 +5,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/features2d.hpp>
-#include "matrix_operations.h"
+#include <matrix_operations.h>
 
 using namespace cv;
 typedef vector<Point> Contour;
@@ -14,17 +14,16 @@ class LeastSquares
 {
 private:
     Mat dataset;
-    double slope;
-    double intercept;
 public:
-    LeastSquares(Mat &input);
+    double k;
+    double q;
+    double R2;
+
+    LeastSquares();
     LeastSquares(Contour contour);
-    double getSlope(){
-        return slope;
-    }
-    double getIntercept(){
-        return intercept;
-    }
+
+    double getX(double y);
+    double getY(double x);
 };
 
 #endif // LEASTSQUARES_H
