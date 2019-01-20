@@ -44,11 +44,7 @@ void drawColorContours(const Mat &destArray, const vector<contour> &contours, co
 
 void drawColorContours(const Mat &destArray, const vector<contour> &contours, const vector<Vec4i> &hierarchy, const Scalar color)
 {
-    for( size_t i = 0; i< contours.size(); i++ )
-    {for( size_t i = 0; i< contours.size(); i++ )
-        {
-            drawContours( destArray, contours, (int)i, color, 1, LINE_AA, hierarchy, 0);
-        }
+    for( size_t i = 0; i< contours.size(); i++ ){
         drawContours( destArray, contours, (int)i, color, 1, LINE_AA, hierarchy, 0);
     }
 }
